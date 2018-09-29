@@ -1,6 +1,5 @@
-theme: jekyll-theme-midnight
-
-name: Swift-Lang-Learn
+name: Hank Quinlan, Horrible Cop
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 
+theme: jekyll-theme-midnight
