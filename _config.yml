@@ -2,5 +2,6 @@ theme: jekyll-theme-midnight
 
 title: Swift-Lang-Learn
 description: Thrills & spills on the Swift learning journey.
+twitter:  https://twitter.com/abidDidLoad
 permalink: /blog/:year/:month/:day/:title
 
