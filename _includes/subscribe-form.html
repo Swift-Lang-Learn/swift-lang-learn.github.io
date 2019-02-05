@@ -1,0 +1,24 @@
+{%- comment -%}
+<!-- 
+     Before implementing this jekyll snippet make sure
+     1. you have signed up with Mailchimp.
+     2. you have created a list in Mailchimp.
+     3. you have defined the list in _config.yml,
+     for ex: "mailchimp-list: //redgadgets.us10.list-manage.com/subscribe/post?u=210acce5db69d3d4a04b0e25d&amp;id=08c6708f40"
+-->  
+{%- endcomment -%}
+{%- if site.mailchimp-list -%}
+<div class="alert bg-darkest alert-dismissible fade show" role="alert">
+  <h6><small>Subscribe to more awesome content!</small></h6>
+  <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="d-flex mt-3 needs-validation"  target="_blank" novalidate>
+    <label class="sr-only" for="mce-EMAIL">E-mail</label>
+    <input type="email" name="EMAIL" class="form-control bg-transparent mb-2 mr-sm-2 border border-darker rounded-0" id="mce-EMAIL" placeholder="your@email.com" autocomplete="on" required>
+    <button type="submit" class="btn btn-info mb-2 rounded-0" name="subscribe">
+        <i class="far fa-lg fa-envelope"></i>
+    </button>
+  </form>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{%- endif -%}

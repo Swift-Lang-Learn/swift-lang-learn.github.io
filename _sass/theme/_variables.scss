@@ -1,0 +1,53 @@
+// theme colors
+$body-bg: #061F2F;
+$body-color: #d3d4d4;
+
+$darker: #27343B;
+$darkest:  #101c29;
+
+$thumbnailBorder: #374656;
+
+$theme-colors: (
+  "darker": $darker,
+  "darkest": $darkest,
+);
+
+
+// Fonts
+$font-family-sans-serif:      "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$headings-color: #fff;
+
+$link-color: #9CD7F7;
+$link-hover-color: rgba($link-color, .8);
+
+// $border-color: #374656;
+
+$hr-border-color: #4f6071;
+
+$code-color: #c1f1f0;
+
+// Cards
+
+$card-border-color: #374656;
+$card-cap-bg: #101c29;
+$card-cap-color: #101c29;
+$card-bg: #24394c;
+
+// Pagination
+
+$pagination-color: #9CD7F7;
+$pagination-bg: #0f1c2a;
+$pagination-border-width: 0;
+$pagination-border-color: #0f1c2a;
+
+$pagination-focus-box-shadow: none;
+$pagination-focus-outline: 0 !default;
+
+$pagination-hover-color: $link-hover-color;
+$pagination-hover-bg: #6c757d;
+$pagination-hover-border-color: #dee2e6;
+
+$pagination-active-color: #fff;
+$pagination-active-bg: #000;
+$pagination-active-border-color: #dee2e6;

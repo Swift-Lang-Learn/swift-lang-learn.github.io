@@ -1,0 +1,41 @@
+// Cards
+.card {
+  margin-bottom: 1.25rem;
+}
+
+.post-thumbnail {
+  border-bottom: 1px solid $thumbnailBorder;
+  flex: 0 0 150px;
+
+  img {
+    max-width: 150px;
+    height: auto;
+  }
+  @include media-breakpoint-up(lg) {
+    border-bottom-width: 0;
+
+  border-right: 1px solid $thumbnailBorder;
+  }
+}
+
+.navbar-dark.bg-dark {
+  background: #27343B;
+}
+
+.hvr-underline-from-left:before {
+  background: #fff;
+}
+
+.nav-item.active>.nav-link:before {
+  right: 0;
+  background: #2098D1;
+}
+
+// Blockquotes
+blockquote {
+  padding: 10px 20px;
+  background: #1f3341;
+  border-left: 5px solid #1488C6;
+  margin-bottom: $spacer;
+  font-size: $blockquote-font-size;
+}

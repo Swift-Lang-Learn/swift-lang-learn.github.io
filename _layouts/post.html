@@ -1,0 +1,131 @@
+---
+layout: default
+---
+<article class="border-bottom border-dark" itemscope itemtype="http://schema.org/BlogPosting" itemprop="mainEntity">
+  <link itemprop="mainEntityOfPage" href="{{ page.url | relative_url }}">
+  <section class="banner bg-darkest text-center text-light pb-3 pt-4">
+    <div class="container">
+      {%- if page.thumbnail.path -%}
+      <a href="{{ page.url | relative_url }}" class="text-decoration-none">
+          <img src="{{page.thumbnail.path | relative_url}}" class="figure-img img-fluid rounded" alt="{{page.title}} thumbnail" style="max-width:150px;">
+      </a>
+      {%- endif -%}
+      <h1 class="py-3 pb-4">
+        <a href="{{ page.url | relative_url }}" class="text-light small text-decoration-none">{{ page.title | escape }}</a>
+      </h1>
+      {%- if page.description -%}
+      <div class="pb-3 px-5 justify-content-center d-flex">
+        <p class="col-md-8">{{ page.description }}</p>
+      </div>
+      {%- endif -%}
+      <div class="row py-3">
+        <div class="col-sm-4 author" itemscope itemtype="http://schema.org/Person" itemprop="author">
+          {{site.author}}
+        </div>
+        <div class="col-sm-4 date">
+          {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+          <time class="dt-published" data-toggle="tooltip" data-placement="bottom" title="{{ page.date | date: date_format }}"
+            data-momentum="relative" data-time="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}"
+            itemprop="datePublished">
+            {{ page.date }}
+          </time>
+        </div>
+        <div class="col-sm-4 social">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Twitter">
+                <i class="fab fa-lg fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Facebook">
+                <i class="fab fa-lg fa-facebook"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://plus.google.com/share?url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Google Plus">
+                <i class="fab fa-lg fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source={{ site.title }}"
+                  onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                  title="Share on LinkedIn">
+                  <i class="fab fa-lg fa-linkedin"></i>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+<div class="container  pt-4">
+  <div class="row">
+    <div class="col-md-8">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+
+          {%- if page.image.path -%}
+          <figure class="figure">
+              <img src="{{page.image.path | relative_url}}" class="figure-img img-fluid rounded" alt="{{page.title}}">
+              <figcaption class="figure-caption">Credits : <a href="{{page.image.creditlink | relative_url}}" target="_blank">{{page.image.credit }}</a></figcaption>
+            </figure>
+          {%- endif -%}
+
+          <p class="post-meta">
+            {%- include read-time.html -%}
+            <!-- <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+              {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+              {{ page.date | date: date_format }}
+            </time> -->
+            {%- if page.author -%}
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+                itemprop="name">{{ page.author }}</span></span>
+            {%- endif -%}</p>
+        </header>
+
+        <div class="post-content e-content" itemprop="articleBody">
+          {{ content }}
+        </div>
+        <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+      </article>
+
+      {%- include post-next-prev.html -%}
+    </div>
+    <div class="col-md-4">
+
+      {%- if site.related_posts.size > 0 -%}
+      <h5>Related Posts</h5>
+      <hr>
+      {%- endif -%}
+      {% for post in site.related_posts limit:2 %}
+      {% assign match = false %}
+      {% for category in post.categories %}
+      {% if page.categories contains category %}
+      {% assign match = true %}
+      {% endif %}
+      {% endfor %}
+      {% if match %}
+      <div class="card mb-3">
+        <div class="card-body">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {%- if post.description -%}
+          <p class="small mt-3">
+            {{post.description}}
+          </p>
+          {%- endif -%}
+
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

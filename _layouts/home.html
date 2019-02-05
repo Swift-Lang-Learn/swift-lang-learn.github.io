@@ -1,0 +1,146 @@
+---
+layout: default
+---
+
+<div class="jumbotron bg-darkest border-bottom border-darker">
+  <div class="text-center">
+      {%- if site.logo -%}
+      <img class="img-fluid" src="{{site.logo | relative_url}}" alt="logo">
+      {%- endif -%}
+
+      <ul class="nav justify-content-center mt-3">
+          {%- if site.email -%}
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:{{site.email}}">
+              <i class="fas fa-lg fa-envelope"></i>
+            </a>
+          </li>
+          {%- endif -%}
+          {%- if site.twitter_username -%}
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.twitter.com/{{site.twitter_username}}">
+            <i class="fab fa-lg fa-twitter"></i>
+          </a>
+        </li>
+        {%- endif -%}
+        {%- if site.github_username -%}
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/{{site.github_username}}">
+            <i class="fab fa-lg fa-github"></i>
+          </a>
+        </li>
+        {%- endif -%}
+        </ul>
+
+    {%- if site.title -%}
+    <h1 class="page-heading mt-3">{{ site.title }}</h1>
+    {%- endif -%}
+
+    {%- if site.description -%}
+    <h6 class="font-weight-light">{{site.description}}</h6>
+    {%- endif -%}
+  </div>
+</div>
+<div class="home container">
+
+  <div class="row">
+    <div class="col-lg-8">
+      {{ content }}
+
+      <!-- This loops through the paginated posts -->
+      {% for post in paginator.posts %}
+
+      <div class="card">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="post-thumbnail d-flex align-items-center p-3 justify-content-center">
+              {%- if post.thumbnail.path -%}
+            <img class="img-fluid" src="{{post.thumbnail.path | relative_url}}" alt="{{post.title}} thumbnail" width="150">
+            {%- else -%}
+            <img class="img-fluid" src="{{site.posthumbnail | relative_url}}" alt="{{post.title}} image" width="150">
+            {%- endif -%}
+          </div>
+          <div class="post-content d-flex flex-fill">
+            <div class="card-body">
+              {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+              <div class="d-flex align-items-center mb-2">
+                <h5 class="h5">
+                  <a href="{{ post.url | relative_url }}" class="h5 card-link">{{ post.title | escape }}</a>
+                </h5>
+                <h6 class="ml-auto text-muted small">{{ post.date | date: date_format }}</h6>
+              </div>
+
+              {%- if post.description -%}
+              <p class="card-text">
+                {{ post.description }}
+              </p>
+              {%- else -%}
+              {%- if site.show_excerpts -%}
+              <p class="card-text">
+                {{ post.excerpt }}
+              </p>
+              {%- endif -%}
+              {%- endif -%}
+              
+              <!-- <a href="{{ post.url | relative_url }}" class="btn btn-primary rounded-0 px-4">Read More</a> -->
+
+              {%- if site.share_on_social -%}
+              <ul class="nav justify-content-end">
+
+                {%- if site.share_on_twitter -%}
+                <li class="nav-item">
+                  <a class="nav-link p-2" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ site.baseurl }}{{ post.url }}"
+                    onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                    title="Share on Twitter">
+                    <i class="fab fa-lg fa-twitter"></i>
+                  </a>
+                </li>
+                {%- endif -%}
+
+                {%- if site.share_on_facebook -%}
+                <li class="nav-item">
+                  <a class="nav-link p-2" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                    onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                    title="Share on Facebook">
+                    <i class="fab fa-lg fa-facebook"></i>
+                  </a>
+                </li>
+                {%- endif -%}
+                {%- if site.share_on_linkedin -%}
+                <li class="nav-item">
+                  <a class="nav-link p-2" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source={{ site.title }}"
+                    onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                    title="Share on LinkedIn">
+                    <i class="fab fa-lg fa-linkedin"></i>
+                  </a>
+                </li>
+                {%- endif -%}
+              </ul>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {% endfor %}
+
+      {%- include pagination.html -%}
+    </div>
+    <div class="col-lg-4">
+        {%- include subscribe-form.html  -%}
+      <h5>Recent Posts</h5>
+      <hr>
+      {% for post in site.posts offset:1 limit:2 %}
+      <div class="card mb-3">
+        <div class="card-body">
+          <a class="h5 card-link card-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {%- if post.description -%}
+            <p class="card-text">{{post.description}}</p>
+          {%- endif -%}
+          <span>{{site.author}}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

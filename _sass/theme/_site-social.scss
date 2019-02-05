@@ -1,0 +1,13 @@
+.site-social {
+  a {
+    text-decoration: none;
+    color: #fff;
+    padding: .5rem;
+    font-size: 1.5rem;
+
+    @include hover-focus-active {
+      color: theme-color("info");
+    }
+  }
+}
+

@@ -1,0 +1,16 @@
+<div class="row my-5">
+  <div class="col">
+    {%- if page.previous -%}
+    <a href="{{ page.previus.url | relative_url }}" class="btn btn-outline-secondary px-4 rounded-0">
+      <i class="fas fa-chevron-left"></i> &nbsp; Previus Post
+    </a>
+    {%- endif -%}
+  </div>
+  <div class="col text-right">
+    {%- if page.next -%}
+    <a href="{{ page.next.url | relative_url }}" class="btn btn-outline-primary px-4 rounded-0">
+      Next Post &nbsp;<i class="fas fa-chevron-right"></i>
+    </a>
+    {%- endif -%}
+  </div>
+</div>
