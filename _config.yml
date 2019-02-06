@@ -2,8 +2,8 @@ title: Blog Title
 email: sitemail@domain.com
 description: >- # this means to ignore newlines until "baseurl:"
   Blog description
-baseurl: "/gitjekyll"
-url: "https://onokumus.com"
+baseurl: ""
+url: "https://swift-lang-learn.github.io"
 permalink: pretty
 logo: "/assets/img/logo.svg"
 phone: +1234
