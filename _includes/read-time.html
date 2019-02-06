@@ -1,0 +1,14 @@
+{% assign words_per_minute = site.words_per_minute | default: 200 %}
+
+{% if post.read_time %}
+  {% assign words = post.content | strip_html | number_of_words %}
+{% elsif page.read_time %}
+  {% assign words = page.content | strip_html | number_of_words %}
+  {% if words < words_per_minute %}
+  <span class="small font-italic">Estimated reading time : less than 1 minute</span>  
+{% elsif words == words_per_minute %}
+<span class="small font-italic">Estimated reading time : 1 minute</span> 
+{% else %}
+<span class="small font-italic">Estimated reading time : {{ words | divided_by:words_per_minute }} minutes</span>
+{% endif %}
+{% endif %}

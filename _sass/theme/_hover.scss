@@ -1,0 +1,19 @@
+@import "../hover/options";
+@import "../hover/mixins";
+@import "../hover/hacks";
+
+@import "../hover/effects/border-transitions/underline-from-left";
+@if $includeClasses {
+	.#{$nameSpace}-underline-from-left {
+		@include underline-from-left();
+	}
+}
+
+.navbar .nav-item > .nav-link::before {
+  background: #fff;
+}
+
+.navbar .nav-item.active > .nav-link::before {
+  right: 0;
+  background: theme-color("primary");
+}

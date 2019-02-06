@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<article class="page">
+
+  {%- if page.image.path -%}
+    <div class="bg-darkest border-bottom border-dark has-bg"
+    style="background-image: url({{page.image.path}}); background-position: center; background-size: cover; background-repeat: no-repeat; min-height: 50vh; padding: 4rem 0; margin-bottom: 2rem; position: relative;">
+    <div class="text-center">  
+      {%- if page.title -%}
+      <h1 class="page-heading mt-3">{{ page.title }}</h1>
+      {%- endif -%}
+      {%- if page.description -%}
+        <p>{{page.description}}</p>
+      {%- endif -%}
+      {%- if page.image.credit -%}
+        <div class="bg-dark p-1" style="position:absolute; bottom:0; right:0;">
+        {%- if page.image.creditlink -%}
+          <a href="{{page.image.creditlink | relative_url}}" target="_blank"><span class="font-italic small">Photo credit: {{page.image.credit}}</span></a>
+        {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+    {%- else -%}
+    <div class="jumbotron bg-darkest border-bottom border-dark">
+        <div class="text-center">
+            {%- if site.logo -%}
+            <img class="img-fluid" src="{{site.logo | relative_url}}" alt="{{site.title}} logo">
+            {%- endif -%}
+      
+          {%- if page.title -%}
+          <h1 class="page-heading mt-3">{{ page.title }}</h1>
+          {%- endif -%}  
+          {%- if page.description -%}
+        <p>{{page.description}}</p>
+      {%- endif -%}
+        </div>
+    {%- endif -%}
+    </div>
+  <div class="container">
+    {{ content }}
+  </div>
+
+</article>

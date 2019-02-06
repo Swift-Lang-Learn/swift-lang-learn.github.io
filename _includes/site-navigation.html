@@ -1,0 +1,39 @@
+<header class="navbar navbar-expand-lg navbar-dark bg-darkest border-bottom border-dark sticky-top" role="navigation">
+  {%- assign default_paths = site.pages | map: "path" -%}
+  {%- assign page_paths = site.header_pages | default: default_paths -%}
+  <a href="{{ "/" | relative_url }}" class="navbar-brand">
+    {%- if site.logo -%}
+    <img src="{{ site.logo | relative_url}}" alt="{{ site.title | escape }} logo" width="40" height="40">
+    {%- else -%}
+    {{ site.title | escape }}
+    {%- endif -%}
+  </a>
+
+  {%- if page_paths -%}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto">
+      {%- for path in page_paths -%}
+      {%- assign my_page = site.pages | where: "path", path | first -%}
+      {%- if my_page.title -%}
+      {%- if my_page.url == page.url -%}
+      <li class="nav-item active">
+        <a class="nav-link hvr-underline-from-left" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      {%- else -%}
+      <li class="nav-item">
+        <a class="nav-link hvr-underline-from-left" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+      </li>
+      {%- endif -%}
+      {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- endif -%}
+</header>
+<!-- /.site-navigation -->

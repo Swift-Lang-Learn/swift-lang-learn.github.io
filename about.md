@@ -1,9 +1,23 @@
+---
+layout: page
+title: About
+description: "Lorem ipsum dolor sit amet"
+permalink: /about/
+image:
+  path: "https://images.unsplash.com/photo-1535732820275-9ffd998cac22?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+  credit: "James Sullivan"
+  creditlink: https://unsplash.com/@iamjsullivan
+---
+
+This theme was make for employer . If you want to make changes, edit the `_config.yml` file.
+
+```yml
 title: Blog Title
 email: sitemail@domain.com
 description: >- # this means to ignore newlines until "baseurl:"
   Blog description
-baseurl: "/gitjekyll"
-url: "https://onokumus.com"
+baseurl: ""
+url: ""
 permalink: pretty
 logo: "/assets/img/logo.svg"
 phone: +1234
@@ -99,3 +113,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+```
