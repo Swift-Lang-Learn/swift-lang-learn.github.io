@@ -5,7 +5,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://swift-lang-learn.github.io"
 permalink: pretty
-logo: "/assets/img/logo.svg"
+logo: "/assets/img/logo.png"
 phone: +1
 location: "United States"
 
