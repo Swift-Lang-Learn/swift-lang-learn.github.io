@@ -1,9 +1,10 @@
-title: Blog Title
-email: sitemail@domain.com
+title: Swift-Lang-Learn
+email: abid@tyrann.net
 description: >- # this means to ignore newlines until "baseurl:"
-  Blog description
-baseurl: "/gitjekyll"
-url: "https://onokumus.com"
+  Thrills & spills on the Swift learning journey.
+remote_theme: bluefil/bluenight
+baseurl: "/bluenight"
+url:
 permalink: pretty
 logo: "/assets/img/logo.svg"
 phone: +1234
