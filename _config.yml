@@ -1,13 +1,13 @@
-title: Blog Title
-email: sitemail@domain.com
+title: Swift-Lang-Lern
+email: abid@tyrann.net
 description: >- # this means to ignore newlines until "baseurl:"
-  Blog description
+  Thrills & spills on the Swift learning journey.
 baseurl: ""
 url: "https://swift-lang-learn.github.io"
 permalink: pretty
 logo: "/assets/img/logo.svg"
-phone: +1234
-location: "123 Street. Nowhere, Earth"
+phone: +1
+location: "United States"
 
 header_pages:
   - index.html
@@ -34,7 +34,7 @@ facebook:
   publisher: 1234
   admins: 1234
 
-google_analytics: UA-1669764-16
+google_analytics: UA-134082319-1
 
 webmaster_verifications:
   google: 1234
@@ -44,16 +44,14 @@ webmaster_verifications:
   baidu: 1234
 
 social:
-  name: Ben Balter
+  name: Abid Khwaja
   links:
-    - https://twitter.com/BenBalter
-    - https://www.facebook.com/ben.balter
-    - https://www.linkedin.com/in/BenBalter
-    - https://plus.google.com/+BenBalter
-    - https://github.com/benbalter
-    - https://keybase.io/benbalter
+    - https://twitter.com/abidDidLoad
+    - https://www.facebook.com/abu.iman
+    - https://www.linkedin.com/in/abidkhwaja
+    - https://github.com/Swift-Lang-Learn
 
-google_analytics: UA-1669764-16
+google_analytics: UA-134082319-1
 
 webmaster_verifications:
   google: 1234
@@ -62,14 +60,14 @@ webmaster_verifications:
   yandex: 1234
   baidu: 1234
 
-author: John Doe
+author: Abid Khwaja
 
 twitter:
-  username: onokumus
+  username: abidDidLoad
   card: summary
 
-twitter_username: onokumus
-github_username:  onokumus
+twitter_username: abidDidLoad
+github_username:  Swift-Lang-Learn
 dribbble_username:
 facebook_username:
 flickr_username:
