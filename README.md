@@ -1,1 +1,1 @@
-A blog site.
+Open Source Swift language learning blog.
