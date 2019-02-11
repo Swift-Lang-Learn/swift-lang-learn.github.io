@@ -5,8 +5,8 @@ description: "Why you see what you see on this blog."
 date:   2019-02-06 19:53:43 -0500
 read_time: true
 thumbnail: 
-  path: /images/cball.jpg
-categories: [intro, update]
+path: /images/hellomobile.jpg
+categories: [jekyll, update]
 ---
 
 Hi!  Thanks from dropping by!
