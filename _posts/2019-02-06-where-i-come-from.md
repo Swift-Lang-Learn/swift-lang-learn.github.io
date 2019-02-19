@@ -5,7 +5,7 @@ description: "Why you see what you see on this blog."
 date:   2019-02-06 19:53:43 -0500
 read_time: true
 thumbnail: 
-path: /images/hellomobile.jpg
+  path: /images/hellomobile.jpg
 categories: [jekyll, update]
 ---
 
