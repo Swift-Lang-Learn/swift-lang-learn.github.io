@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Portfolio
-description: "Information about my portfolio."
+description: "Section under construction."
 permalink: /portfolio/
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-description: "Lorem ipsum dolor sit amet"
+description: "Section Under Construction"
 permalink: /about/
 image:
   path: "https://images.unsplash.com/photo-1535732820275-9ffd998cac22?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
