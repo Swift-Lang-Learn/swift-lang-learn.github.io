@@ -65,7 +65,7 @@ To declare an empty tuple:
 
 {% highlight swift %}
 var coordinates: (Int, Int)
-{% end highlight %}
+{% endhighlight %}
 
 To give it values:
 
