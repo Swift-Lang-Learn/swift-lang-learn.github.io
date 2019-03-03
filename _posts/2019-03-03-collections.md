@@ -47,7 +47,7 @@ var mySet: Set<Int> = [1, 2, 3, 4, 5]
 
 
 ### Dictionaries
-A Dictionary is a list of values in no particular order but has keys that you define to associate with each value, in other words, and unordered collection of pairs - you access the values using the keys instead of numerical positions.  Keys in the dictionary must be unique, but different keys may point to the same value.  All keys must be of the same type and all values must be of the same type.
+A Dictionary is a list of values in no particular order but has keys that you define to associate with each value, in other words, an unordered collection of pairs - you access the values using the keys instead of numerical positions.  Keys in the dictionary must be unique, but different keys may point to the same value.  All keys must be of the same type and all values must be of the same type.
 
 To declare an empty dictionary:
 
@@ -89,7 +89,7 @@ var coordinates = (x: 5, y: 7)
 
 
 ### Enums
-Enumerations, or enums for short, allow you to define a data type for a group of related values - values that you also define.  For example, you can define an enum called `seasons` which contains the values `Winter`, `Spring`, `Summer` and `Autumn`.  enums group related values so you can use them without having to worry about spelling mistakes.  Note again, enums are types.  You can attach raw values to enums so they can be created from integers or strings, or you can add associated values to store additional information about each case.
+Enumerations, or enums for short, allow you to define a data type for a group of related values.  For example, you can define an enum called `seasons` which contains the values `Winter`, `Spring`, `Summer` and `Autumn`.  enums group related values so you can use them without having to worry about spelling mistakes.  Note again, enums are types.  You can attach raw values to enums so they can be created from integers or strings, or you can add associated values to store additional information about each case.
 
 You can create an enum like this:
 
