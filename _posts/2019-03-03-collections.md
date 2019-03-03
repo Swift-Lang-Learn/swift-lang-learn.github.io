@@ -2,7 +2,7 @@
 layout: post
 title:  “Collections+”
 description: “Storing groups of items under a single value.”
-date:   2019-02-09 17:53:43 -0500
+date:   2019-03-03 09:40:43 -0500
 read_time: true
 thumbnail: 
   path: /images/cardstack.jpg
@@ -19,7 +19,7 @@ To declare an array with values:
 var shoppingList = [“Figs”, “Carrots”, “Juice”, “Ice Cream“, “Butter”]
 {% endhighlight %}
 
-`shoppingList[1]` contains the value Carrots.
+`shoppingList[1]` contains the value `Carrots`.
 
 Here are different ways to declare and empty array:
 
