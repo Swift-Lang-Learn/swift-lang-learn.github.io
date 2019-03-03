@@ -8,6 +8,7 @@ permalink: pretty
 logo: "/assets/img/logo.png"
 phone: +1
 location: "United States"
+highlighter: rouge
 
 header_pages:
   - index.html
