@@ -21,7 +21,7 @@ var shoppingList = [“Figs”, “Carrots”, “Juice”, “Ice Cream“, “
 
 `shoppingList[1]` would contain the value `Carrots`.
 
-Here are different ways to declare and empty array:
+Here are different ways to declare an empty array:
 
 {% highlight swift %}
 var list = [String]()
@@ -89,7 +89,7 @@ var coordinates = (x: 5, y: 7)
 
 
 ### Enums
-Enumerations, or enums for short, allow you to define a data type for a group of related values.  For example, you can define an enum called `seasons` which contains the values `Winter`, `Spring`, `Summer` and `Autumn`.  enums group related values so you can use them without having to worry about spelling mistakes.  Note again, enums are types.  You can attach raw values to enums so they can be created from integers or strings, or you can add associated values to store additional information about each case.
+Enumerations, or enums for short, allow you to define a data type for a group of related values.  For example, you can define an enum called `seasons` which contains the values `Winter`, `Spring`, `Summer` and `Autumn`.  enums group related values and allow you to document which values are legal to use.  This makes your code more readable and less prone to the introduction of errors because if you misspell a value that was defined by an enum, the compiler will immediately flag an error.  Note again, enums are types.  You can attach raw values to enums so they can be created from integers or strings, or you can add associated values to store additional information about each case.
 
 You can create an enum like this:
 
