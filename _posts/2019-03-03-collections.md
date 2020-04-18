@@ -11,12 +11,15 @@ categories: [jekyll, update]
 Swift provides ways of storing groups of items under a single value. There are several ways of doing this and each method is different from the other so the one you decide to use will depend upon what you’re trying to accomplish.  You have the option of using arrays, sets, dictionaries, tuples or enums.  Now [officially](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html), tuples and enums are not collection types but since they also allow you to group values, I’m going to include them here.
 
 ### Arrays
-An Array is a list of values, in a specific order and you access each value using its numerical position in the list - the first numerical position is 0, not 1.  All values must be of the same type in an array. For example, you cannot have a single array that contains both integers and strings.
+An Array is a list of values, in a specific order and you access each value using its numerical position in the list - the first numerical position is 0, not 1.  All values must be of the same type in an array. For example, you cannot have a single array that contains both integers and strings.  Actually, that's not true.  If you really do want an array of mixed types, you have to explicitly declare it as type "Any."
 
 To declare an array with values:
 
 {% highlight swift %}
 var shoppingList = [“Figs”, “Carrots”, “Juice”, “Ice Cream“, “Butter”]
+
+let mixedTypeArray: Any = ["George", "Andrew", 45, 33.09]
+// must declare type "Any" for mixed type array
 {% endhighlight %}
 
 `shoppingList[1]` would contain the value `Carrots`.
