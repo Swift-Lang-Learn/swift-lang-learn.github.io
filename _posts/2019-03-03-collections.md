@@ -34,7 +34,7 @@ var list = [String]()
 
 
 ### Sets
-A Set is a list of values in no particular order and each value must be unique. If you insist on adding a duplicate value to the set, Swift will just ignore the duplicate as if it doesn’t exist. Since sets are unordered, you cannot access the values using a numerical position as you would in an array.  Just as in an array, a set can only contain values of a single type.
+A Set is a list of values in no particular order and each value must be unique. If you insist on adding a duplicate value to the set, Swift will just ignore the duplicate as if it doesn’t exist. Since sets are unordered, you cannot access the values using a numerical position as you would in an array.  A set can only contain values of a single type.
 
 To declare an empty set:
 
