@@ -18,7 +18,7 @@ Let’s say our application’s job is to display a handful of pictures stored i
 2. the path to the bundle directory
 3. the names of the files that are to be displayed
 
-### File System Interface
+## File System Interface
 The `FileManager` Class gives you a convenient interface to the file system.  Instantiate a new `FileManager` object to open the interface:
 
 {% highlight swift %}
