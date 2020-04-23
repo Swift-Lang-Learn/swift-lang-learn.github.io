@@ -8,24 +8,24 @@ thumbnail:
   path: /images/iphonefiles.jpg
 categories: [jekyll, update]
 ---
-In this post, we will get familiar with how to enable iOS applications to access data on local file systems.  By this we mean displaying data that is stored within the application’s bundle directory to the user.
+In this post, we will get familiar with how to enable iOS applications to access data on local file systems, data that is stored in the application's bundle directory.
 
 What is a bundle?  An iOS applicaiton is made up of code, icons and several other types of content - all of this content is stored on disk on the iPhone in a directory - this directory with all of its contents organized within specifically defined sub-directories is called a bundle.
 
-Let’s say our application’s job is to display a handful of pictures stored in the application bundle to the user.  There are 3 things the application needs (note the order):
+Let’s say our application’s job is to display a handful of pictures stored in the application bundle to the user.  There are 3 things the application needs before starting the work of displaying the pictures (note the order):
 
-1. an interface to the iPhone’s filesystem
+1. an interface to the iPhone’s file system
 2. the path to the bundle directory
 3. the names of the files that are to be displayed
 
 ### File System Interface
-The `FileManager` Class gives you a convenient interface to the file system.  Instantiate a new `FileManager` object to open the interface:
+The `FileManager` class gives you a convenient interface to the file system.  Instantiate a new `FileManager` object to open the interface:
 
 {% highlight swift %}
 let fm = FileManager.default
 {% endhighlight %}
 
-The `fm` instance can now be used to examine the contents of the file system and make changes to it if needed.  If you’re curious, the object returned by FileManager.default will look something like this:  `<NSFileManager: 0x600003cf8000>\n`.
+The `fm` instance can now be used to examine the contents of the file system and make changes to it if needed.  If you’re curious, the object returned by `FileManager.default` will look something like this:  `<NSFileManager: 0x600003cf8000>\n`.
 
 ### Bundle Directory Path
 Any executable can use a bundle object to locate resources, either inside an application’s bundle or in a known bundle located somewhere else, but, you can’t use a bundle object to locate files in other parts of the file system.
@@ -55,7 +55,7 @@ This method returns an array of Strings - items in the path, i.e., filenames, di
 func contentsOfDirectory(atPath path: String) throws -> [String]
 {% endhighlight %}
 
-The reason we’re using `try!` and risking a crash of our application if there is nothing in the resource path is the same as above; there really is no risk.  If our resource path truly did return a `nil`, there would be something fundamentally broken and our application would be the least of what the user would be facing.  So unless there are major problem with the user’s device, the returned resource path will always have a value.
+The reason we’re using `try!` and risking a crash of our application if there is nothing in the resource path is the same as above; there really is no risk.  If our resource path truly did return a `nil`, there would be something fundamentally broken and our application would be the least of what the user would be facing.  So unless there are major problems with the user’s device, the returned resource path will always have a value.
 
 All together, our code to get ready to access elements from the file system is this:
 
