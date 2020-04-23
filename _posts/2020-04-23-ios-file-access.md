@@ -64,6 +64,6 @@ let path = Bundle.main.resourcePath!
 let items = try! fm.contentsOfDirectory(atPath: path)
 {% endhighlight %}
 
-You will use this often so this is something useful to memorize.
+You will use this often so memorize the 3 lines above.
 
 After this, you would write the code to filter and store the names of the files you needed into a variable for later use.
