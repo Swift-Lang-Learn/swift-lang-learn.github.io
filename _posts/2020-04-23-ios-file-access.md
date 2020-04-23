@@ -58,7 +58,6 @@ func contentsOfDirectory(atPath path: String) throws -> [String]
 The reason we’re using `try!` and risking a crash of our application if there is nothing in the resource path is the same as above; there really is no risk.  If our resource path truly did return a `nil`, there would be something fundamentally broken and our application would be the least of what the user would be facing.  So unless there are major problems with the user’s device, the returned resource path will always have a value.
 
 All together, our code to get ready to access elements from the file system is this:
-
 {% highlight swift %}
 let fm = FileManager.default
 let path = Bundle.main.resourcePath!
