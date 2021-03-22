@@ -9,7 +9,7 @@ thumbnail:
 categories: [jekyll, update]
 ---
 
-Hi!  Thanks from dropping by!
+Hi!  Thanks for dropping by!
 
 I hope you find the information in this blog useful.  My purpose in creating it is to share with you my experiences and insights as I work to become a Swift/iOS developer.  I've just started on this path so necessarily, the informtion you find here will be most useful for beginners, initially.  As I grow and learn, I will share what I learn here, especially those things that I have a great deal of trouble understanding.  The goal will be to take what I have trouble understanding and presenting it in a way that's not difficult to understand.
 
